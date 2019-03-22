@@ -1,0 +1,4 @@
+check-manifest>=0.37
+pylint>=2.3.1
+pytest>=4.3
+twine>=1.13.0
