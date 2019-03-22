@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
+from olutils import convert_ts
 
-from modules.utils import convert_ts
-from modules.processing import isnull
+from olfactory.operations import isnull
 
 
 class SpanBase(object):
@@ -57,7 +57,14 @@ class SpanBase(object):
 
 
 class Span(SpanBase):
-    """Simple span"""
+    """Simple span
+
+    Example:
+        >> span = Span(10, 20)
+        >> span.plot(label="span", color="red", ts_unit=xunit, w_borders=False)
+        >> plt.xticks(rotation=45)
+        >> plt.show()
+    """
 
     def __init__(self, fst, lst):
         if fst > lst:
